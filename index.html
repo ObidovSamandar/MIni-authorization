@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in Page(JS)</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="form-wrapper">
+        <div class="form-wrapperBg-img">
+            <div class="leftTopText">
+                <h2 class="topPrimaryTitle">One of us?</h2>
+                <p class="topPrimaryText">
+                    If you already has an account, <br>
+                    just sign in. We've missed you!.
+                </p>
+            </div>
+            <div class="rightTopText">
+                <h2 class="topPrimaryTitle">New here?</h2>
+                <p class="topPrimaryText">
+                    Sign up and discover great <br>
+                    amount of new opportunities!
+                </p>
+            </div>
+            <div class="leftfixed-content">
+               <div class="signInsignOut">
+                   <a href="#" id="signButton">
+                       <span class="signInBtn">Sign In</span>
+                       <span class="signInOut">Sign Out</span>
+                   </a>
+               </div>
+            </div>
+            <div class="rightfixedcontent2">
+               <div class="form-information">
+                   <div class="form-content">
+                       <p id="errorCatcher"></p>
+                       <form action="#" id="registerForm">
+                        <div class="name-form">
+                            <label for="userName">Name</label><br>
+                            <input type="text" id="userName" >
+                        </div>
+                        <div class="surName-form">
+                            <label for="userSurName">Surname</label><br>
+                            <input type="text" id="userSurName" >
+                        </div>
+                        <div class="age-form">
+                            <label for="userAge">Age</label><br>
+                            <input type="number" id="userAge" min="15" >
+                        </div>
+                        <div class="gender-form">
+                            <label for="userGender">Gender</label>
+                            <select name="gender" id="userGender" >
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                        </div>
+                        <div class="acountName-form">
+                            <label for="accountName">Username</label><br>
+                            <input type="text" id="accountName" >
+                        </div>
+                        <div class="acountpassword-form">
+                            <label for="password">Password</label><br>
+                            <input type="password" id="password" >
+                        </div>
+                        <button class="formSignBtn">Sign Up</button><br>
+                    </form>
+                   </div>
+               </div>
+            </div>
+            <div class="newleft">
+               <div class="newleftInner">
+                <h2 class="primaryText">Welcome Back</h2>
+                <p id="errorHandler"></p>
+                <form action="#" id="logInForm">
+                    <div class="name-form">
+                        <label for="personName">Username</label><br>
+                        <input type="text" id="personName">
+                    </div>
+                    <div class="password-form">
+                        <label for="userpassword">Password</label><br>
+                        <input type="password" id="userpassword">
+                    </div>
+                    <button class="formSignBtn">Sign In</button><br>
+                </form>
+               </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html> 
+

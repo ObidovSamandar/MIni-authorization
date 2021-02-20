@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background-color: #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.form-wrapper{
+    width: 70vw;
+    height: 93vh;
+    margin: 0 auto;
+    background-color: #ffffff;
+    position: relative;
+    z-index: 4;
+    display: flex;
+}
+.form-wrapperBg-img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    display: flex;
+    transition: all ease 1s;
+    background: url(146.jpg) no-repeat left center/cover;
+    overflow-x: hidden;
+}
+.form-wrapperBg-img::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.leftTopText,.rightTopText{
+    width: 30%;
+    padding: 60px 30px;
+    text-align: center;
+    color: #ffffff;
+    position: absolute;
+    overflow-x: hidden;
+    z-index: 5;
+    transition:  all ease 1.3s;
+}
+.leftTopText{
+    left: 0%;
+}
+.rightTopText{
+    right: 20%;
+}
+h2.topPrimaryTitle{
+    font-size: 25px;
+    font-weight: 400;
+    padding-bottom: 10px;
+}
+p.topPrimaryText{
+    font-size: 15px;
+    line-height: 1.4;
+}
+.leftTopText.active{
+    z-index: 0;
+    left: 20%;
+}
+.rightTopText.active{
+    z-index: 0;
+    right: 0%;
+}
+
+
+.leftfixed-content{
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    overflow-x: hidden;
+    z-index: 4;
+    right: 70%;
+    color: #ffffff;
+    transition: all ease 1.3s;
+}
+.leftfixed-content.active{
+    right: 0;
+}
+
+.leftfixed-content .signInsignOut{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 190px;
+}
+
+.signInsignOut a{
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid #ffffff;
+    padding: 8px 18px;
+    border-radius: 15px;
+    overflow-y: hidden;
+    position: relative;
+}
+
+#signButton .signInBtn{
+    position: absolute;
+    left: 25px;
+    top: 8px;
+    transition: all ease 1.3s;
+}
+
+#signButton .signInBtn.active{
+    top: -78px;
+}
+
+#signButton .signInOut{
+    position: relative;
+    top: 100px;
+    transition: all ease 1.3s;
+}
+
+#signButton .signInOut.active{
+    top: 0;
+}
+
+
+.rightfixedcontent2{
+    width: 70%;
+    height: 100%;
+    position: absolute;
+    right:0%;
+    background-color: #ffffff;
+    transition: all ease 1.3s;
+    z-index: 6;
+}
+
+
+.rightfixedcontent2.active{
+    width: 0%;
+}
+
+.form-information{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+
+}
+
+h2.primaryText{
+    margin-bottom: 25px;
+}
+form  p.forgtpassword , form label{
+    color: #ceaf82;
+    font-size: 12px;
+}
+ form label{
+    font-size: 15px;
+}
+form  p.forgtpassword{
+    margin-top: 10px;
+}
+ form div{
+    margin-bottom: 15px;
+}
+ form input{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #BDBDBD;
+    width: 90%;
+    margin-top: 10px;
+    font-size: 16px;
+}
+ form  button{
+    width: 95%;
+    padding: 10px 0;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 15px;
+}
+
+ form  button.formSignBtn{
+    margin: 15px 0 25px 0;
+    background: #D4AF7A;
+    border: 1px solid #D4AF7A;
+    color: #ffffff;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+form  button.formSignBtn:active{
+    border: 1px solid #D4AF7A;
+    background-color: #ffffff;
+    color: #D4AF7A;
+}
+ form  button.formJoinBtn{
+    border: 2px solid #DBDEE3;
+    background-color: #ffffff;
+    color: #798198;
+}
+form  button.formJoinBtn span{
+    color: #798198;
+    font-weight: 600;
+}
+
+select{
+    outline: none;
+    display: block;
+    border: none;
+    margin:0 auto;
+    font-size: 15px;
+    margin-top: 10px;
+    border-bottom: 1px solid #BDBDBD;
+    width: 90%;
+
+}
+.newleft{
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    background-color: #ffffff;
+    transition: all ease 1.3s;
+    overflow-x: hidden;
+}
+.newleftInner,.form-content{
+    width: 290px;
+    text-align: center;
+    position: absolute;
+    top: 70px;
+    transition: all ease 1.3s;
+}
+
+#logInForm{
+    margin-top: 60px;
+}
+#logInForm div{
+    margin-bottom: 25px;
+}
+#errorCatcher,#errorHandler{
+    font-weight: 500;
+    height: 35px;
+    width: 170px;
+    line-height: 35px;
+    position: absolute;
+    left: 50%;
+    font-size: 14px;
+    transition: all ease .4s;
+    opacity: 0;
+    transform: translateX(-50%);
+}
+#errorCatcher{
+    top: -50px;
+}
+#errorHandler{
+    top: 40px;
+    height: 30px;
+    opacity: 1;
+    line-height: 30px;
+    width: 200px;
+    color: #df4759;
+}
+
+.newleftInner{
+    right: -700px;
+}
+.newleftInner.active{
+    right: 30%;
+}
+.form-content{
+    left: 50%;
+    transform: translateX(-50%);
+}
+.form-content.active{
+    left: -500px;
+}
+
+.newleft.active{
+    width: 70%;
+}
+
+
