@@ -83,8 +83,8 @@ form.onsubmit=(e)=>{
             }
             throw new Error('Please Fill The Form')
         }else{
-            user.Name=userName.value;
-            user.Surname=userSurName.value;
+            user.FirstName=userName.value;
+            user.LastName=userSurName.value;
             user.Age=userAge.value;
             user.Gender=userGender.value;
             user.Username=accountName.value;
@@ -192,7 +192,7 @@ function checking(){
             setTimeout(() => {
                 fileLocation.href=fileLocation.href.replace(z,'/home.html');
             },1000);
-        }else {throw new Error('Please Check it')}
+        }else {throw new Error('Wrong Password or Username')}
     }
     catch(e){
         errorHandler.style.opacity='1';
@@ -207,7 +207,7 @@ logInForm.onsubmit=(e)=>{
         if(personName.value!="" && userpassword.value!=""){
             checking();
         }else{
-            throw new Error("Please Enter Your Information!")
+            throw new Error("Please Enter Username and Password!")
         }
     }
     catch(e){
@@ -216,3 +216,14 @@ logInForm.onsubmit=(e)=>{
     }
     
 }
+
+
+history.pushState(null, null, location.href);
+    history.back();
+    history.forward();
+    window.onpopstate = function ()
+    {
+        history.go(1);
+    };
+
+  
