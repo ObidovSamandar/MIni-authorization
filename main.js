@@ -109,7 +109,7 @@ form.onsubmit=(e)=>{
           
           setTimeout(() => {
             if(fileLocation.href.indexOf('.html')==-1){
-                fileLocation.href=fileLocation.href+'/home.html';
+                fileLocation.href=fileLocation.href+'home.html';
             }else{
                 fileLocation.href=fileLocation.href.replace(z,'/home.html');
             }
@@ -197,7 +197,7 @@ function checking(){
             }
             setTimeout(() => {
                 if(fileLocation.href.indexOf('.html')==-1){
-                    fileLocation.href=fileLocation.href+'/home.html';
+                    fileLocation.href=fileLocation.href+'home.html';
                 }else{
                     fileLocation.href=fileLocation.href.replace(z,'/home.html');
                 }
