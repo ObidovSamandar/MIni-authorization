@@ -113,7 +113,9 @@ p.topPrimaryText{
     overflow-y: hidden;
     position: relative;
 }
-
+#signButton{
+    cursor: pointer;
+}
 #signButton .signInBtn{
     position: absolute;
     left: 25px;
