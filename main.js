@@ -69,6 +69,8 @@ userGender.onclick=(e)=>{
 
 let fileLocation=window.location;
 let z=fileLocation.href.substring(fileLocation.href.lastIndexOf('/'),fileLocation.href.length);
+
+
 //Form Submission
 form.onsubmit=(e)=>{
     e.preventDefault();
@@ -106,8 +108,12 @@ form.onsubmit=(e)=>{
            },800);
           
           setTimeout(() => {
-            fileLocation.href=fileLocation.href.replace(z,'/home.html')
-          },600);
+            if(fileLocation.href.indexOf('.html')==-1){
+                fileLocation.href=fileLocation.href+'/home.html';
+            }else{
+                fileLocation.href=fileLocation.href.replace(z,'/home.html');
+            }
+          },1000);
 
             userName.value=null;
             userSurName.value=null;
@@ -190,7 +196,11 @@ function checking(){
                 }
             }
             setTimeout(() => {
-                fileLocation.href=fileLocation.href.replace(z,'/home.html');
+                if(fileLocation.href.indexOf('.html')==-1){
+                    fileLocation.href=fileLocation.href+'/home.html';
+                }else{
+                    fileLocation.href=fileLocation.href.replace(z,'/home.html');
+                }
             },1000);
         }else {throw new Error('Wrong Password or Username')}
     }
